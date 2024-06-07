@@ -41,7 +41,7 @@ for index, video in enumerate(playlist.videos, start=1):
         continue
     
     print(f"Downloading {video_title} as {output_filename}...")
-    # Download the video
+    # Download the video in the highest available resolution
     video.streams.get_highest_resolution().download(output_path=folder_path, filename=output_filename)
     print(f"Downloaded {video_title} to {output_path}")
 
